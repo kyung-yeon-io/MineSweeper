@@ -1,0 +1,53 @@
+<html>
+<head>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<style>
+		p {
+			text-align: center;
+		}
+
+		table {
+			display: inline-block;
+			border: 1px solid #000;
+			border-collapse: collapse;
+		}
+		tr {
+			height: 30px;
+		}
+		td {
+			text-align: center;
+			border: 1px solid #000;
+			width: 30px;
+		}
+	</style>
+
+</head>
+<body>
+
+<p>MineSweeper</p>
+
+<div style="text-align: center; width: 100%;">
+
+<% if(result.code == "1000"){ %>
+
+<table>
+<%	for(var i=0; i<arr.length; i++){ %>
+		<tr style="height: 30px;">
+		<% for(var j=0; j<arr.length; j++){ %>
+			
+			<td><%= (arr[i][j] == "0" ? "" : arr[i][j]) %></td>
+			
+		<% } %> 
+		
+		</tr>
+<%	}	%>
+</table>
+</div>
+
+<% }else{ %> <%= result.msg %> <% } %>
+
+</body>
+</html>
