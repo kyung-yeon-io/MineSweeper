@@ -2,18 +2,22 @@
 
 ## minesweeper made javascript
 
-```console
-npm install
+## install
+```
+$npm install
+```
 
-node bin/www
+## usage
+```
+$node bin/www
 
-http://localhost:3000
+$open http://localhost:3000
 ```
 
 ```javascript
 var GAME_SIZE	= 10; :: array size. GAME_SIZE x GAME_SIZE size
-var BUMB_COUNT	= 10; :: bumb count in array
+var BOMB_COUNT	= 10; :: bomb count in array
 ```
 
-1. Install bumbs at random locations
-2. find bumbs
+1. Install bombs at random locations
+2. find bombs
